@@ -1,0 +1,12 @@
+<nav class="navbar bg-body-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Post Box</a>
+    <% if content_for(:title)%>
+        <%= yield :title %>
+    <% else%>  
+        Posts  
+    <% end %>
+
+    <%= link_to "Create Post", new_post_path, class: "btn btn-success"%>
+  </div>
+</nav>

@@ -53,7 +53,11 @@ Create project
 
 Things you may want to cover:
 
-## Creating MVC 
+## Steps in creating MVC 
 
-* rails generate model <model_name>
-* rails g scaffold <model_name> title:string description:string 
+* rails generate model <model_name> (or)
+* rails g scaffold Post title:string description:string username:string age:integer
+* rails db:migrate  --> generates schema.rb
+
+## Routing 
+* /rails/info/routes provides all the available routes
