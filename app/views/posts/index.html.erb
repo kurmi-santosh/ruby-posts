@@ -1,17 +1,24 @@
 <% content_for :title do %>
   Posts &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>
 <% end %>
-<h1>Posts</h1>
+<h1>Recent Posts</h1>
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-    <hr/>
+    <div class="card mt-4">
+      <div class="card-body">
+        <%= render post %>  
+      </div>
+      <div class="card-footer">
+        <%= link_to "Show this post", post %>
+      </div>
+    </div>
+    
+
   <% end %>
  
 </div>
 
-<%= link_to "New post", new_post_path %>
+<button class="btn btn-warning mt-4">
+  <%= link_to "View all entries", archives_index_path %>
+</button>
