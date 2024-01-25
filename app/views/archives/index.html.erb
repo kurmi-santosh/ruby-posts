@@ -2,7 +2,7 @@
     <h3>No posts found!</h3>
 <% else %>
     <% @posts.each do |day, entries| %>
-        <h3>Entries for <%= day %></h3>
+        <h3 class="mt-4">Entries for <%= day %></h3>
         <% entries.each do |entry| %>
             <div class="card mt-4">
                 <%= link_to post_path(entry), style: 'text-decoration:none', class: 'card-body' do %>

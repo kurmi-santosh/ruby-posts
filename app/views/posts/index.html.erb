@@ -1,7 +1,7 @@
 <% content_for :title do %>
   Posts &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>
 <% end %>
-<h1>Recent Posts</h1>
+<h1>Today's Posts</h1>
 
 <div id="posts">
   <% @posts.each do |post| %>

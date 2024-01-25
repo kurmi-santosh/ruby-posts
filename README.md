@@ -64,3 +64,11 @@ Things you may want to cover:
 
 ## Routing 
 * /rails/info/routes provides all the available routes
+
+## Rails console
+* rails c
+```sh
+    entry = Post.last
+    entry.created_at = Date.yesterday
+    entry.save
+```
