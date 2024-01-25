@@ -4,15 +4,13 @@
     <% @posts.each do |day, entries| %>
         <h3>Entries for <%= day %></h3>
         <% entries.each do |entry| %>
-            <%= link_to post_path(entry), style: 'text-decoration:none' do %>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title">
-                        <p><strong><%= entry.title %></strong> - from <%= entry.username %> aged <%= entry.age %> years</p>     
-                    </div>
-                    </div>
-                </div>
-            <% end %>
+            <div class="card mt-4">
+                <%= link_to post_path(entry), style: 'text-decoration:none', class: 'card-body' do %>
+                    <div class="card-title">
+                        <p><strong><%= entry.title %></strong> - from <%= entry.username %> aged <%= entry.age %> years</p> 
+                    </div>      
+                <% end %>
+            </div>
         <% end %>
     <% end %>
 <% end %>
